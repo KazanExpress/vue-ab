@@ -9,7 +9,7 @@ export const storage = {
   name: 'split-test', // name of cookie or localStorage entry
   // if localStorage is available - use it
   method: window.localStorage ? 'localStorage' : 'cookie',   // supported methods are 'cookie' and 'localStorage'
-  expiry: 30,         // ignore entries that weren't touched this amount of days
+  expiry: 0,         // ignore entries that weren't touched this amount of days
 
   _load () {
     if (this.method === 'cookie')

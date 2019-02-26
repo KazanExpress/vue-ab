@@ -77,7 +77,7 @@ export function writeCookie (name, data, expiry) {
   const d = new Date()
   d.setTime(d.getTime() + daysToMicroSeconds(expiry))
 
-  const options = `expires=${d.toUTCString()};path=/`
+  const options = (expiry ? `expires=${d.toUTCString()};` : '') + `path=/`
   data = encodeURIComponent(JSON.stringify(data))
   document.cookie = `${name}=${data};${options}`
 }
@@ -91,6 +91,9 @@ export function getLocalStorage (name, expiry) {
 }
 
 export function writeLocalStorage (name, value, expiry) {
-  value.expiry = new Date().getTime() + daysToMicroSeconds(expiry)
+  if (expiry) {
+    value.expiry = new Date().getTime() + daysToMicroSeconds(expiry)
+  }
+
   localStorage.setItem(name, JSON.stringify(value))
 }
