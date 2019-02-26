@@ -1,3 +1,5 @@
+import { storage } from './persistence'
+
 export default {
   functional: true,
   props: {
