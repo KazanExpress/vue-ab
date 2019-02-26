@@ -7,7 +7,7 @@ interface PluginOptions {
   };
 }
 
-declare function install(Vue: import('vue').VueConstructor, options: PluginOptions);
+declare function install(Vue: any, options: PluginOptions): void;
 
 declare function randomCandidate<T>(variations: Array<T>): T;
 declare function selectAB<T>(name: string, variants: Array<T>): T;
