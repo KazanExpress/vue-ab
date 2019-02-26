@@ -10,10 +10,16 @@
     "type": "git",
     "url": "git+https://github.com/KazanExpress/vue-ab.git"
   },
+  "peerDependencies": {
+    "vue": "^2.5.0"
+  },
   "author": "",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/KazanExpress/vue-ab/issues"
   },
-  "homepage": "https://github.com/KazanExpress/vue-ab#readme"
+  "homepage": "https://github.com/KazanExpress/vue-ab#readme",
+  "dependencies": {
+    "vue": "^2.6.7"
+  }
 }
