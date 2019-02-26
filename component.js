@@ -1,4 +1,5 @@
 import { storage } from './persistence'
+import { randomCandidate } from './toolbox'
 
 export default {
   functional: true,
