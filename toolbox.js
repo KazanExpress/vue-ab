@@ -87,7 +87,7 @@ export function getLocalStorage (name, expiry) {
   d.setTime(d.getTime() + daysToMicroSeconds(expiry))
   const entry = JSON.parse(localStorage.getItem(name))
 
-  return entry && entry.expires > d.getTime() ? entry : null
+  return entry && entry.expires && entry.expires > d.getTime() ? entry : null
 }
 
 export function writeLocalStorage (name, value, expiry) {
