@@ -19,7 +19,5 @@
     "url": "https://github.com/KazanExpress/vue-ab/issues"
   },
   "homepage": "https://github.com/KazanExpress/vue-ab#readme",
-  "dependencies": {
-    "vue": "^2.6.7"
-  }
+  "dependencies": {}
 }
