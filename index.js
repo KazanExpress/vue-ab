@@ -17,13 +17,6 @@ function install(Vue, options = {}) {
       this.$abtest = selectAB
     }
   });
-
-  window.setSplitType = function setSplitType(name, winner) {
-    storage.entry = {
-      name,
-      winner
-    };
-  }
 }
 
 export default install;
